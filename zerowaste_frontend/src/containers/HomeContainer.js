@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-
 import HomeComponent from "../components/HomeComponent"
 
 
@@ -43,7 +42,22 @@ const HomeContainer = () =>{
     return(
         <>
         <h1>Hi from home containers</h1>
+        <BrowserRouter>
+            <div className="App">
+                <ul>
+                    <li><Link to = '/' >Homepage</Link></li>
+                    <li><Link to = '/recipes' >Recipes</Link></li>
+                    <li><Link to = '/ingredients' >Ingredients</Link></li>
+                </ul>
+                <Routes>
+                    <Route path='/' element={<HomeComponent />}/>
+                    <Route path='/recipes' element={<recipes />}/>
+                    <Route path='/ingredients' element={<ingredients />}/>
 
+
+                </Routes>
+            </div>
+        </BrowserRouter>
         <HomeComponent></HomeComponent>
         </>
     )

@@ -6,17 +6,19 @@ import IngredientsList from "../components/IngredientsList";
 
 
 const HomeContainer = () =>{
+
+    const [selectedRecipe, setSelectedRecipe] = useState([])
  
     
-    const [users, setUsers] = useState([])
-    useEffect(() => {
-        const fetchUsersData = async () => {
-            const response = await fetch("http://localhost:8080/users");
-            const data = await response.json();
-            setUsers(data);
-        }
-        fetchUsersData()
-    }, [])
+    // const [users, setUsers] = useState([])
+    // useEffect(() => {
+    //     const fetchUsersData = async () => {
+    //         const response = await fetch("http://localhost:8080/users");
+    //         const data = await response.json();
+    //         setUsers(data);
+    //     }
+    //     fetchUsersData()
+    // }, [])
 
     const [recipes, setRecipes] = useState([])
     useEffect (() => {
@@ -28,18 +30,20 @@ const HomeContainer = () =>{
         fetchRecipesData()
     }, [])
 
-    const [ingredients, setIngredients] = useState([])
+    // const [ingredients, setIngredients] = useState([])
 
-    useEffect (() => {
-        const fetchIngredientsData = async () => {
-            const response = await fetch("http://localhost:8080/ingredients");
-            const data = await response.json();
-            setIngredients(data);
+    // useEffect (() => {
+    //     const fetchIngredientsData = async () => {
+    //         const response = await fetch("http://localhost:8080/ingredients");
+    //         const data = await response.json();
+    //         setIngredients(data);
+    //     }
+    //     fetchIngredientsData()
+    // }, [])
+
+        const selectRecipe = (recipe) => {
+            setSelectedRecipe(recipe);
         }
-        fetchIngredientsData()
-    }, [])
-
-
 
     return(
         <>
@@ -53,7 +57,7 @@ const HomeContainer = () =>{
                 </ul>
                 <Routes>
                     <Route path='/' element={<HomeComponent />}/>
-                    <Route path='/recipes' element={<RecipeList recipes={recipes}/>}/>
+                    <Route path='/recipes' element={<RecipeList recipes={recipes} selectRecipe={selectRecipe}/>}/>
                     <Route path='/ingredients' element={<IngredientsList />}/>
 
 

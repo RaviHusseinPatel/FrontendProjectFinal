@@ -4,12 +4,9 @@ const RecipeListItem = ({recipe, selectRecipe}) => {
         selectRecipe(recipe);
     }
     
-    return(
-        <>
-        <li onClick={handleClick}>{recipe.name}-{recipe.calories}
-        </li>
-        </>
-    )
+    return(   
+        <li onClick={handleClick}>{recipe.name}-{recipe.calories} </li>  
+    );
 }
 
 export default RecipeListItem;

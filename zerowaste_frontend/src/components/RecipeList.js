@@ -26,17 +26,10 @@ const RecipeList = ({recipes, selectRecipe}) => {
 
         </ul>
 
- 
-    
-        {/* <ul>{recipeListItems}</ul> */}
-        <p>{recipes[0].name}</p>
-
-        <RecipeListItem recipes={recipes} selectRecipe={selectRecipe}/>
-        
+        {/* <p>{recipes[0].name}</p> */}        
         </>
 
     )
-
 
     }
 

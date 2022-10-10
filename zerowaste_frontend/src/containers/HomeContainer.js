@@ -1,13 +1,12 @@
-import { useEffect, useState } from "react"
+// import { useEffect, useState } from "react"
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import HomeComponent from "../components/HomeComponent"
-import RecipeList from "../components/RecipeList";
 import IngredientsList from "../components/IngredientsList";
+import RecipeContainer from "./RecipeContainer";
 
 
 const HomeContainer = () =>{
 
-    const [selectedRecipe, setSelectedRecipe] = useState([])
  
     
     // const [users, setUsers] = useState([])
@@ -20,15 +19,7 @@ const HomeContainer = () =>{
     //     fetchUsersData()
     // }, [])
 
-    const [recipes, setRecipes] = useState([])
-    useEffect (() => {
-        const fetchRecipesData = async () => {
-            const response = await fetch("http://localhost:8080/recipes");
-            const data = await response.json();
-            setRecipes(data);
-        }
-        fetchRecipesData()
-    }, [])
+   
 
     // const [ingredients, setIngredients] = useState([])
 
@@ -41,9 +32,7 @@ const HomeContainer = () =>{
     //     fetchIngredientsData()
     // }, [])
 
-        const selectRecipe = (recipe) => {
-            setSelectedRecipe(recipe);
-        }
+        
 
     return(
         <>
@@ -57,7 +46,7 @@ const HomeContainer = () =>{
                 </ul>
                 <Routes>
                     <Route path='/' element={<HomeComponent />}/>
-                    <Route path='/recipes' element={<RecipeList recipes={recipes} selectRecipe={selectRecipe}/>}/>
+                    <Route path='/recipes' element={<RecipeContainer/>}/>
                     <Route path='/ingredients' element={<IngredientsList />}/>
 
 

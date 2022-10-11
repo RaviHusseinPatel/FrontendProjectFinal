@@ -1,7 +1,8 @@
 // import { useEffect, useState } from "react"
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import HomeComponent from "../components/HomeComponent"
-import IngredientsList from "../components/IngredientsList";
+
+import IngredientsContainer from "./IngredientsContainer";
 import RecipeContainer from "./RecipeContainer";
 
 
@@ -47,7 +48,7 @@ const HomeContainer = () =>{
                 <Routes>
                     <Route path='/' element={<HomeComponent />}/>
                     <Route path='/recipes' element={<RecipeContainer/>}/>
-                    <Route path='/ingredients' element={<IngredientsList />}/>
+                    <Route path='/ingredients' element={<IngredientsContainer/>}/>
 
 
                 </Routes>
@@ -56,6 +57,7 @@ const HomeContainer = () =>{
         {/* <HomeComponent></HomeComponent> */}
         </>
     )
+    
 }
 
 export default HomeContainer;

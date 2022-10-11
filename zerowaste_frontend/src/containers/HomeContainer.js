@@ -37,7 +37,18 @@ const HomeContainer = () =>{
 
     return(
         <>
-        <h1>Hi from home containers</h1>
+        <div id="headerbar">
+        <h3 id="header">ZWR- Food waste is bad taste!</h3>
+        {/* <nav>
+            <a><img src="/../logo.img"/></a>
+        </nav> */}
+        </div>
+
+
+
+
+        <h2>Hi from home containers</h2>
+        
         <BrowserRouter>
             <div className="App">
                 <ul>

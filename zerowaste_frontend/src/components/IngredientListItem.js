@@ -1,7 +1,14 @@
-const IngredientsListItem = ({ingredient}) => {
+const IngredientsListItem = ({ingredient, selectIngredient}) => {
+
+    const handleClick = () => {
+        selectIngredient(ingredient)
+            
+    }
 
     return (
-        <li> {ingredient.name}</li>
+        <>
+        <li onClick={handleClick}> {ingredient.name}</li>
+        </>
         
     )
 }

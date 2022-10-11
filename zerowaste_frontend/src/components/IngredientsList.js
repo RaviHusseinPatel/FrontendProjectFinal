@@ -1,11 +1,11 @@
 import IngredientsListItem from "./IngredientListItem"
-const IngredientsList = ({ingredients}) => {
+const IngredientsList = ({ingredients, selectIngredient}) => {
 
    
     const IngredientsListItemFunction= ingredients.map((ingredient) => {
         return ( 
         <li>
-           <IngredientsListItem ingredient = {ingredient} />
+           <IngredientsListItem ingredient = {ingredient} selectIngredient={selectIngredient} />
            
            </li>
         )

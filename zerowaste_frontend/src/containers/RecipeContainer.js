@@ -21,7 +21,7 @@ const RecipeContainer = () =>{
 
     const addFavouritedRecipe= (recipe) =>{
         if(favouritedRecipes.includes(recipe)){
-            alert("You've already favourited this country!");
+            alert("You've already added this to favourites!");
         } else {
             setFavouritedRecipes([...favouritedRecipes, recipe]
             )

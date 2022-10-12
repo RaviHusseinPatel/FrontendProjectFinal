@@ -10,6 +10,7 @@ const RecipeContainer = () =>{
     const [favouritedRecipes, setFavouritedRecipes]=useState([]);
     const [selectedRecipe, setSelectedRecipe] = useState(null);
     
+    
 
     useEffect (() => {
         const fetchRecipesData = async () => {
@@ -45,6 +46,7 @@ const RecipeContainer = () =>{
 
 
 
+
     return(
         <div className="Recipe-container"> 
             <h1 className="Hi-from">Hi from recipe containers</h1>
@@ -62,7 +64,7 @@ const RecipeContainer = () =>{
             selectRecipe= {selectRecipe}
             />
             
-        <RecipeForm postRecipe={postRecipe}/>
+        <RecipeForm postRecipe={postRecipe} />
 
         </div>
     )

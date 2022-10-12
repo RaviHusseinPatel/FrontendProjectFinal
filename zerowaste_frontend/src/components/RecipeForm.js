@@ -2,16 +2,18 @@ import {useState} from 'react';
 
 const RecipeForm = ({postRecipe}) => {
 
+    
+
     const [stateRecipe, setStateRecipe] = useState(
         {
 
 
 		name: "",
 		description: "",
-		cookingTime: null,
-		servings: null,
-        calories: null,
-		method: ""
+		cookingTime: "",
+		servings: "",
+        calories: "",
+		method: "",
 	    
 
         }
@@ -24,6 +26,8 @@ const RecipeForm = ({postRecipe}) => {
         copiedRecipe[propertyName] = event.target.value;
         setStateRecipe(copiedRecipe);
     }
+
+    
 
     const handleFormSubmit = (event) => {
         event.preventDefault();

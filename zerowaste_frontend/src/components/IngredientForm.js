@@ -4,11 +4,7 @@ const IngredientForm = ({postIngredient}) => {
 
     const [stateIngredient, setStateIngredient] = useState(
         {
-
-
 		name: ""
-		
-	    
 
         }
     )

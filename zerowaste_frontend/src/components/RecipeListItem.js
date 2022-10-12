@@ -5,7 +5,7 @@ const RecipeListItem = ({recipe, selectRecipe}) => {
     }
     
     return(   
-        <li onClick={handleClick}>{recipe.name}-{recipe.calories} </li>  
+        <p onClick={handleClick}>{recipe.name}-{recipe.calories}</p>
     );
 }
 

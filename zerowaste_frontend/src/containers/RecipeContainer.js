@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import RecipeList from "../components/RecipeList";
 import FavouritedRecipesList from "../components/FavouritedRecipesList";
 import ClickedRecipe from "../components/ClickedRecipe";
+import RecipeForm from "../components/RecipeForm";
 
 const RecipeContainer = () =>{
 
@@ -32,11 +33,21 @@ const RecipeContainer = () =>{
         setSelectedRecipe(recipe);
     }
 
+    const postRecipe = (newRecipe) => {
+        fetch("http://localhost:8080/recipes", {
+            method: "POST",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(newRecipe)
+        })
+        .then(response => response.json())
+        .then(savedRecipe => setRecipes([...recipes, savedRecipe]))
+    }
+
+
 
     return(
         <div className="Recipe-container"> 
             <h1 className="Hi-from">Hi from recipe containers</h1>
-             {/* <BrowserRouter> */}
             
             <RecipeList recipes={recipes} selectRecipe={selectRecipe}/>
             {selectedRecipe ?
@@ -51,21 +62,8 @@ const RecipeContainer = () =>{
             selectRecipe= {selectRecipe}
             />
             
-                {/* <ul>
-                    <li><Link to = '/' >Homepage</Link></li>
-                    <li><Link to = '/recipes' >Recipes</Link></li>
-                    <li><Link to = '/ingredients' >Ingredients</Link></li>
-                </ul>
-                <Routes>
-                    <Route path='/' element={<HomeComponent />}/>
-                    <Route path='/recipes' element={<RecipeList recipes={recipes} selectRecipe={selectRecipe}/>}/>
-                    <Route path='/ingredients' element={<IngredientsList />}/>
+        <RecipeForm postRecipe={postRecipe}/>
 
-
-                </Routes>
-            
-        </BrowserRouter> */}
-        {/* <HomeComponent></HomeComponent> */}
         </div>
     )
 

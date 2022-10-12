@@ -10,7 +10,7 @@ const RecipeList = ({recipes, selectRecipe}) => {
         return ( 
         <li>
            <RecipeListItem recipe = {recipe} selectRecipe={selectRecipe}/>
-           </li>
+        </li>
         ) 
         }
     )
@@ -26,7 +26,7 @@ const RecipeList = ({recipes, selectRecipe}) => {
 
         </ul>
 
-        {/* <p>{recipes[0].name}</p> */}        
+              
         </>
 
     )

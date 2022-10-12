@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import IngredientsList from "../components/IngredientsList";
 import ClickedIngredient from "../components/ClickedIngredient";
+import IngredientForm from "../components/IngredientForm";
 
 
 const IngredientsContainer = () => {
@@ -24,6 +25,16 @@ const IngredientsContainer = () => {
         setSelectedIngredient(Ingredient);
     }
 
+    const postIngredient = (newIngredient) => {
+        fetch("http://localhost:8080/ingredients", {
+            method: "POST",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(newIngredient)
+        })
+        .then(response => response.json())
+        .then(savedIngredient => setIngredients([...ingredients, savedIngredient]))
+    }
+
     return(
 
         <>
@@ -31,10 +42,10 @@ const IngredientsContainer = () => {
             {selectedIngredient ?
                 <ClickedIngredient
                     selectedIngredient= {selectedIngredient}
-                    //addFavouritedRecipe={addFavouritedRecipe}
                     />
                     :<div><h1>Select a Ingredient</h1></div>
         }
+        <IngredientForm postIngredient={postIngredient}/>
         </>
 
 

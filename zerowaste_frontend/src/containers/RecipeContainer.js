@@ -34,25 +34,23 @@ const RecipeContainer = () =>{
 
 
     return(
-        <>
-            <h1>Hi from recipe containers</h1>
+        <div className="Recipe-container"> 
+            <h1 className="Hi-from">Hi from recipe containers</h1>
              {/* <BrowserRouter> */}
-            <div id="recipe-container">
-
+            
             <RecipeList recipes={recipes} selectRecipe={selectRecipe}/>
             {selectedRecipe ?
                 <ClickedRecipe
                     selectedRecipe= {selectedRecipe}
                     addFavouritedRecipe={addFavouritedRecipe}
                     />
-                    :<div><h1>Select a Recipe</h1></div>
+                    :<div><h1 className="Select-recipe">Select a Recipe</h1></div>
         }
         <FavouritedRecipesList 
             favouritedRecipes={favouritedRecipes}
             selectRecipe= {selectRecipe}
             />
-            </div>
-
+            
                 {/* <ul>
                     <li><Link to = '/' >Homepage</Link></li>
                     <li><Link to = '/recipes' >Recipes</Link></li>
@@ -68,7 +66,7 @@ const RecipeContainer = () =>{
             
         </BrowserRouter> */}
         {/* <HomeComponent></HomeComponent> */}
-        </>
+        </div>
     )
 
 

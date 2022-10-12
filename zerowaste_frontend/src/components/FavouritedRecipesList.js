@@ -7,7 +7,7 @@ const FavouritedRecipesList = ({favouritedRecipes, selectRecipe}) => {
     })
     return(
         <ul>
-            <h1>favourited</h1>
+            <h1 className="Favourited">favourited</h1>
             {favouritedRecipeListItems}
         </ul>
     );

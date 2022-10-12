@@ -37,12 +37,12 @@ const HomeContainer = () =>{
 
     return(
         <>
-        <div id="headerbar">
-        <h3 id="header">ZWR- Food waste is bad taste!</h3>
+        {/* <div id="headerbar">
+        <h3 id="header">ZWR- Food waste is bad taste!</h3> */}
         {/* <nav>
             <a><img src="/../logo.img"/></a>
         </nav> */}
-        </div>
+        {/* </div> */}
 
 
 

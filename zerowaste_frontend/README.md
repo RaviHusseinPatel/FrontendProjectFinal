@@ -23,11 +23,14 @@ Our website is designed to accommodate those wishing to make the most of their l
 
 ### Project structre - Wireframe
 
-This can be found in the wireframe folder in the git repo
+
+![Alt text](/zerowaste_frontend/Wireframes/Screen Shot 2022-10-13 at 16.56.42.png)
 
 ### Project structre - Flow diagram
 
-This can be found in the wireframe folder in the git repo
+
+![Alt text](/zerowaste_frontend/Wireframes/Screen Shot 2022-10-13 at 16.51.07.png)
+
 
 ### Further implementations and extensions 
 

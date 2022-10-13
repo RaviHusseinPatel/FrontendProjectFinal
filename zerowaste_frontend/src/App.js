@@ -3,6 +3,11 @@ import HomeContainer from './containers/HomeContainer';
 import { useState } from 'react';
 import styles from "./components/Modal";
 import Modal from './components/Modal';
+import { FaUserAlt } from "react-icons/fa";
+import { RiUser2Fill } from "react-icons/ri";
+
+
+
 
   const App = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +16,11 @@ import Modal from './components/Modal';
       <HomeContainer></HomeContainer>
       <main>
         <button className={styles.primaryBtn} onClick={() => setIsOpen(true)}>
-          Account Log In
+         
+          <RiUser2Fill size={40}
+                       onMouseOver={({target})=>target.style.color="white"}
+                       onMouseOut={({target})=>target.style.color="black"}
+                       />
         </button>
         {isOpen && <Modal setIsOpen={setIsOpen} />}
       </main>

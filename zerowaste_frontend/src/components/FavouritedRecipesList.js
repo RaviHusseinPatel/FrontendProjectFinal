@@ -1,4 +1,6 @@
 import RecipeListItem from "./RecipeListItem";
+import { BsFillStarFill } from "react-icons/bs";
+
 
 const FavouritedRecipesList = ({favouritedRecipes, selectRecipe}) => {
 
@@ -7,7 +9,8 @@ const FavouritedRecipesList = ({favouritedRecipes, selectRecipe}) => {
     })
     return(
         <ul>
-            <h1 className="Favourited">favourited</h1>
+            <h3 className="Favourited">favourited
+            <BsFillStarFill></BsFillStarFill></h3>
             {favouritedRecipeListItems}
         </ul>
     );

@@ -4,6 +4,17 @@ import HomeComponent from "../components/HomeComponent"
 
 import IngredientsContainer from "./IngredientsContainer";
 import RecipeContainer from "./RecipeContainer";
+import { FaPepperHot } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
+
+import { ImSpoonKnife } from "react-icons/im";
+import { ImLeaf } from "react-icons/im";
+
+import { BiFoodMenu } from "react-icons/bi";
+
+
+
+
 
 
 const HomeContainer = () =>{
@@ -37,24 +48,39 @@ const HomeContainer = () =>{
 
     return(
         <>
-        {/* <div id="headerbar">
-        <h3 id="header">ZWR- Food waste is bad taste!</h3> */}
-        {/* <nav>
-            <a><img src="/../logo.img"/></a>
-        </nav> */}
-        {/* </div> */}
+    
 
-
-
-
-        <h2>Hi from home containers</h2>
+    <h1>ZeroWasteRecipes</h1>
+        <h2>Welcome to ZeroWasteRecipes, choose below to view available recipes and ingredients! <br></br> Don't forget to add your own ;)</h2>
         
-        <BrowserRouter>
-            <div className="App">
-                <ul>
-                    <li><Link to = '/' >Homepage</Link></li>
-                    <li><Link to = '/recipes' >Recipes</Link></li>
-                    <li><Link to = '/ingredients' >Ingredients</Link></li>
+        <BrowserRouter id="browser">
+            <div id="App">
+                <ul id="navbar">
+                    <li className="homeLogo"><Link to = '/' >
+                    <FaHome size={90}
+                       onMouseOver={({target})=>target.style.color="white"}
+                       onMouseOut={({target})=>target.style.color="black"}
+                       />
+                    
+                    </Link></li>
+
+
+                    <li><Link to = '/recipes' className="recipesLogo">
+                        {/* Recipes */}
+                        <BiFoodMenu size={90}
+                       onMouseOver={({target})=>target.style.color="white"}
+                       onMouseOut={({target})=>target.style.color="black"}/>
+                        {/* Recipes */}
+
+
+                    </Link></li>
+                    <li><Link to = '/ingredients' className="ingredientsLogo">
+                        {/* Ingredients */}
+                        <FaPepperHot size={90}
+                       onMouseOver={({target})=>target.style.color="white"}
+                       onMouseOut={({target})=>target.style.color="black"}/>                 
+                        
+                        </Link></li>
                 </ul>
                 <Routes>
                     <Route path='/' element={<HomeComponent />}/>

@@ -43,7 +43,7 @@ const IngredientsContainer = () => {
                 <ClickedIngredient
                     selectedIngredient= {selectedIngredient}
                     />
-                    :<div><h1>Select a Ingredient</h1></div>
+                    :<div><h3></h3></div>
         }
         <IngredientForm postIngredient={postIngredient}/>
         </>

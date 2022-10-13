@@ -26,7 +26,7 @@ const IngredientForm = ({postIngredient}) => {
     return(
         <>
             <form onSubmit={handleFormSubmit}>
-                <h3>Add a new Recipe</h3>
+                <h3>Add a new Ingredient</h3>
 		
                 
 

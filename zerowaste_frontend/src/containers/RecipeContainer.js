@@ -49,7 +49,7 @@ const RecipeContainer = () =>{
 
     return(
         <div className="Recipe-container"> 
-            <h1 className="Hi-from">Hi from recipe containers</h1>
+            
             
             <RecipeList recipes={recipes} selectRecipe={selectRecipe}/>
             {selectedRecipe ?
@@ -57,7 +57,7 @@ const RecipeContainer = () =>{
                     selectedRecipe= {selectedRecipe}
                     addFavouritedRecipe={addFavouritedRecipe}
                     />
-                    :<div><h1 className="Select-recipe">Select a Recipe</h1></div>
+                    :<div><h1 className="Select-recipe"></h1></div>
         }
         <FavouritedRecipesList 
             favouritedRecipes={favouritedRecipes}

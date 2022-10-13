@@ -18,7 +18,7 @@ const RecipeList = ({recipes, selectRecipe}) => {
     return( 
 
         <>
-        <h2>hi from Recipe list</h2>
+        <h2>Click to view your chosen recipe's description, cooking method and more!</h2>
 
         <ul>
 

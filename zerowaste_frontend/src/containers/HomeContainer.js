@@ -50,7 +50,7 @@ const HomeContainer = () =>{
         <>
     
 
-    <h1>ZeroWasteRecipes</h1>
+    <h1 id="title">ZeroWasteRecipes</h1>
         <h2>Welcome to ZeroWasteRecipes, choose below to view available recipes and ingredients! <br></br> Don't forget to add your own ;)</h2>
         
         <BrowserRouter id="browser">

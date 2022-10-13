@@ -1,6 +1,9 @@
 import { FaCloudMoonRain } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
+import { SiInstagram } from "react-icons/si";
+import { FaEnvelope } from "react-icons/fa";
+
 
 
 
@@ -10,24 +13,29 @@ const HomeComponent = () =>{
     return(
         <>  
         <div className="aboutContact">
-        <h3 className="About-us" href="www.youtube.com">Find us
+        <a  className="About-us" href="http://www.googlemaps.com"><strong>Find us:</strong> 
             
         <SiGooglemaps size={45}
                        onMouseOver={({target})=>target.style.color="white"}
                        onMouseOut={({target})=>target.style.color="black"}
                        />
-        </h3>   
+        </a>   
+        {/* <a  className="About-us" href="http://www.instagram.com"> 
+            
+            <SiInstagram size={45}
+                           onMouseOver={({target})=>target.style.color="white"}
+                           onMouseOut={({target})=>target.style.color="black"}
+                           />
+            </a>    */}
 
-        
-
-
-
-        <h3 className="Contact-Info">Contact us
-        <FaPhoneAlt size={45}
+    
+        <a  className="mail" href="mailto:zerowaste@gmail.com"><strong>Contact us: </strong> 
+            
+        <FaEnvelope size={40}
                        onMouseOver={({target})=>target.style.color="white"}
-                       onMouseOut={({target})=>target.style.color="black"}/>
-                       
-        </h3>
+                       onMouseOut={({target})=>target.style.color="black"}
+                       />
+        </a> 
         </div>
        
 

@@ -15,7 +15,7 @@ import { RiUser2Fill } from "react-icons/ri";
       <>
       <HomeContainer></HomeContainer>
       <main>
-        <button className={styles.primaryBtn} onClick={() => setIsOpen(true)}>
+        <button id='userbtn' className={styles.primaryBtn} onClick={() => setIsOpen(true)}>
          
           <RiUser2Fill size={40}
                        onMouseOver={({target})=>target.style.color="white"}

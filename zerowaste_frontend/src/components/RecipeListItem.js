@@ -5,7 +5,9 @@ const RecipeListItem = ({recipe, selectRecipe}) => {
     }
     
     return(   
-        <p onClick={handleClick}> {recipe.name}-{recipe.calories}</p>
+        <p onMouseOver={({target})=>target.style.color="white"}
+        onMouseOut={({target})=>target.style.color="black"}
+        onClick={handleClick}> {recipe.name}-{recipe.calories}</p>
     );
 }
 

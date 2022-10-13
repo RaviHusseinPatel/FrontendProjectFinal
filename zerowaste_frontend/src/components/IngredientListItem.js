@@ -7,7 +7,10 @@ const IngredientsListItem = ({ingredient, selectIngredient}) => {
 
     return (
         <>
-        <li onClick={handleClick}> {ingredient.name}</li>
+        <li onMouseOver={({target})=>target.style.color="white"}
+            onMouseOut={({target})=>target.style.color="black"}
+                       onClick={handleClick}> {ingredient.name}
+        </li>
         </>
         
     )

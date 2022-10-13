@@ -23,13 +23,11 @@ Our website is designed to accommodate those wishing to make the most of their l
 
 ### Project structre - Wireframe
 
-
-![Alt text](/Wireframes/Screen Shot 2022-10-13 at 16.56.42.png)
+Picture can be found within the wireframe folder
 
 ### Project structre - Flow diagram
 
-
-![Alt text](/Wireframes/Screen Shot 2022-10-13 at 16.51.07.png)
+Picture can be found within wireframe folder
 
 
 ### Further implementations and extensions 

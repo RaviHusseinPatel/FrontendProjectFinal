@@ -3,7 +3,7 @@ import HomeContainer from './containers/HomeContainer';
 import { useState } from 'react';
 import styles from "./components/Modal";
 import Modal from './components/Modal';
-import { FaUserAlt } from "react-icons/fa";
+// import { FaUserAlt } from "react-icons/fa";
 import { RiUser2Fill } from "react-icons/ri";
 
 

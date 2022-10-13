@@ -24,6 +24,7 @@ Our website is designed to accommodate those wishing to make the most of their l
 ### Project structre - Wireframe
 
 Picture can be found within the wireframe folder
+![Alt text](zerowaste_frontend/Wireframes/Screen Shot 2022-10-13 at 16.51.07.png?raw=true "Optional Title")
 
 ### Project structre - Flow diagram
 
